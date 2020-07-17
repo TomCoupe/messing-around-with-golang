@@ -2,10 +2,18 @@ package main
 
 import (
   "fmt"
+  "buffio"
+  "os"
 )
 
 func main()  {
-  var x int = 1
+  scanner := buffio.NewScanner(os.Stdin)
+  scanner.Scan()
+  input := scanner.Text()
 
-  fmt.Println(x)
+  fmt.Println("you typed: %q", input)
+
+  // var x int = 1
+
+  // fmt.Println(x)
 }
